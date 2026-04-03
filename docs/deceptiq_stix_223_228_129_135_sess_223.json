@@ -1,0 +1,78 @@
+{
+  "id": "bundle--c439e15a-6264-45fa-a23f-47bc3c5ef8cd",
+  "type": "bundle",
+  "objects": [
+    {
+      "id": "identity--45eab685-704f-4f31-b9ad-b93ccbc7c16f",
+      "name": "DeceptIQ \u2014 Team Cyfer Trace",
+      "type": "identity",
+      "created": "2026-03-31T05:22:26.000Z",
+      "modified": "2026-03-31T05:22:26.000Z",
+      "description": "DeceptIQ honeypot threat intelligence platform",
+      "spec_version": "2.1",
+      "identity_class": "system"
+    },
+    {
+      "id": "threat-actor--a8dc5005-e133-47f2-9a0f-020f9135b1b1",
+      "name": "Unknown Attacker 223.228.129.135",
+      "type": "threat-actor",
+      "labels": [
+        "Exfiltration"
+      ],
+      "created": "2026-03-31T05:22:26.000Z",
+      "modified": "2026-03-31T05:22:26.000Z",
+      "last_seen": "2026-03-31T04:58:08.000Z",
+      "first_seen": "2026-03-31T04:58:08.000Z",
+      "description": "Attacker from 223.228.129.135 targeting unknown honeypot. AbuseIPDB score: 0. OTX pulses: 0.",
+      "spec_version": "2.1",
+      "sophistication": "intermediate"
+    },
+    {
+      "id": "indicator--07ef673c-e0c6-4519-b8df-91236f233cee",
+      "name": "Malicious IP: 223.228.129.135",
+      "type": "indicator",
+      "labels": [
+        "Exfiltration"
+      ],
+      "created": "2026-03-31T05:22:26.000Z",
+      "pattern": "[ipv4-addr:value = '223.228.129.135']",
+      "modified": "2026-03-31T05:22:26.000Z",
+      "valid_from": "2026-03-31T04:58:08.000Z",
+      "description": "IP observed attacking unknown honeypot",
+      "pattern_type": "stix",
+      "spec_version": "2.1",
+      "created_by_ref": "identity--45eab685-704f-4f31-b9ad-b93ccbc7c16f",
+      "indicator_types": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "id": "observed-data--343a4446-5851-43df-8922-a8ee5e436ec2",
+      "type": "observed-data",
+      "created": "2026-03-31T05:22:26.000Z",
+      "objects": {
+        "0": {
+          "type": "ipv4-addr",
+          "value": "223.228.129.135"
+        }
+      },
+      "modified": "2026-03-31T05:22:26.000Z",
+      "spec_version": "2.1",
+      "last_observed": "2026-03-31T04:58:08.000Z",
+      "created_by_ref": "identity--45eab685-704f-4f31-b9ad-b93ccbc7c16f",
+      "first_observed": "2026-03-31T04:58:08.000Z",
+      "number_observed": 1
+    },
+    {
+      "id": "relationship--751f51ab-8ae1-4d51-823f-37f04849058e",
+      "type": "relationship",
+      "created": "2026-03-31T05:22:26.000Z",
+      "modified": "2026-03-31T05:22:26.000Z",
+      "source_ref": "threat-actor--a8dc5005-e133-47f2-9a0f-020f9135b1b1",
+      "target_ref": "indicator--07ef673c-e0c6-4519-b8df-91236f233cee",
+      "spec_version": "2.1",
+      "relationship_type": "uses"
+    }
+  ],
+  "spec_version": "2.1"
+}

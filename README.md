@@ -958,5 +958,3 @@ Built in 24 hours for the **Secure AI Software & Systems Hackathon 2026**.
 ---
 
 _DeceptIQ — Making every attack a learning opportunity._
-
-```
